@@ -54,6 +54,15 @@ test('checks target actual installation addresses and expire without proving an 
  const invalid=checks.start({...site,returnUrl:'http://unapproved.example'},context);assert.equal(invalid.checks.find(check=>check.id==='origin').status,'failed');assert.equal(invalid.testUrl,null);
 });
 
+test('hosted Fieldnotes diagnostics use the public origin while local rehearsals retain the separate fixture',()=>{
+ const site={id:'demo-fieldnotes',returnUrl:'/demo/fieldnotes',origins:['http://localhost:3004','https://data-compass.org']};
+ const context={country:'NL',publication:'site:demo-fieldnotes@1',configured:true};
+ for(const [frontendOrigin,expected] of [['http://localhost:3000','http://localhost:3004'],['https://data-compass.org','https://data-compass.org']]){
+  const checks=createDeploymentChecks({frontendOrigin,packagePath:new URL('../dist/embed/before.js',import.meta.url).pathname});
+  assert.equal(new URL(checks.start(site,context).testUrl).origin,expected);
+ }
+});
+
 test('research participation summaries count only installations opted in to the current publication',async t=>{
  const {app,request}=await fixture(t);
  const login=await request('/api/session',{method:'POST',body:{role:'researcher'}});const cookie=login.response.headers.get('set-cookie').split(';')[0];

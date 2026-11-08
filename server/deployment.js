@@ -11,7 +11,8 @@ export function createDeploymentChecks({ frontendOrigin, packagePath, clock = Da
     for (const [token, value] of challenges) if (value.expires < clock() - lifetime) challenges.delete(token);
   };
   function target(site) {
-    const base = site.id === 'demo-fieldnotes' && site.returnUrl === '/demo/fieldnotes' ? 'http://localhost:3004' : frontendOrigin;
+    const local = ['localhost', '127.0.0.1'].includes(new URL(frontendOrigin).hostname);
+    const base = local && site.id === 'demo-fieldnotes' && site.returnUrl === '/demo/fieldnotes' ? 'http://localhost:3004' : frontendOrigin;
     try {
       const url = new URL(site.returnUrl, base);
       if (!['http:', 'https:'].includes(url.protocol) || url.username || url.password || !site.origins.includes(url.origin)) return null;
