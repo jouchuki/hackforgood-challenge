@@ -5,17 +5,20 @@ import { resolve } from 'path';
 // are all accessible. The mock platform pages live under mock-platform/.
 export default defineConfig({
   server: {
-    port: 3000,
-    proxy: {
-      '/api': 'http://localhost:3001',
-    },
+    host: '127.0.0.1',
+    port: 3002,
+    strictPort: true,
+    hmr: false,
   },
   build: {
     rollupOptions: {
       input: {
+        portal: resolve(__dirname, 'index.html'),
+        intervention: resolve(__dirname, 'intervention/index.html'),
+        website: resolve(__dirname, 'demo/index.html'),
+        reactExample: resolve(__dirname, 'packages/react/example/index.html'),
         main: resolve(__dirname, 'mock-platform/index.html'),
         search: resolve(__dirname, 'mock-platform/search.html'),
-        demo: resolve(__dirname, 'starter-widget/demo.html'),
       },
     },
   },

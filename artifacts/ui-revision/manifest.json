@@ -1,0 +1,70 @@
+{
+  "desktop": {
+    "width": 1440,
+    "height": 1000
+  },
+  "mobile": {
+    "width": 390,
+    "height": 844
+  },
+  "entries": [
+    {
+      "id": "moderator-overview",
+      "title": "Moderator overview",
+      "route": "/moderator/overview"
+    },
+    {
+      "id": "study-allocation",
+      "title": "Research study setup",
+      "route": "/researcher/studies/reflection-first/editor",
+      "step": "setup"
+    },
+    {
+      "id": "research-messages",
+      "title": "Research message presets",
+      "route": "/researcher/studies/reflection-first/editor",
+      "step": "messages"
+    },
+    {
+      "id": "research-results",
+      "title": "Research results",
+      "route": "/researcher/studies/reflection-first/results"
+    },
+    {
+      "id": "community",
+      "title": "Independent community website",
+      "route": "/demo/forum"
+    },
+    {
+      "id": "fieldnotes",
+      "title": "Independent reading community",
+      "route": "/demo/fieldnotes"
+    },
+    {
+      "id": "mobile-allocation",
+      "title": "Mobile study setup",
+      "route": "/researcher/studies/reflection-first/editor",
+      "step": "setup",
+      "mobile": true
+    },
+    {
+      "id": "mobile-community",
+      "title": "Mobile community website",
+      "route": "/demo/forum",
+      "mobile": true
+    }
+  ],
+  "before": {
+    "capturedAt": "2026-11-08T00:27:41.050Z",
+    "failures": []
+  },
+  "after": {
+    "capturedAt": "2026-11-08T01:03:50.237Z",
+    "capturedEntries": [
+      "study-allocation",
+      "research-messages",
+      "mobile-allocation"
+    ],
+    "failures": []
+  }
+}

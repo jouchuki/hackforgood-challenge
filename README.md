@@ -1,3 +1,28 @@
+# Next Step — local prevention workspace
+
+The technical prototype has separate moderator and researcher workspaces, a visual bilingual message builder with six distinct templates, published intervention journeys, a researcher-only aggregate A/B comparison dashboard and research lab, and installable integration packages. Demonstrations use synthetic inputs only.
+
+```bash
+npm ci
+npm run demo:prepare
+npm run build
+npm run dev
+```
+
+Open **http://localhost:3000/**. Start actual local WordPress with `npm run demo:wordpress`. Use `npm start` after a build for the local production bundle.
+
+- [Technical runbook](docs/RUNBOOK.md)
+- [Saved product and execution plan](docs/PRODUCT_SCOPE.md)
+- [Privacy boundaries](docs/PRIVACY.md)
+- [Current architecture](docs/ARCHITECTURE.md)
+- [Tor and no-script compatibility](docs/TOR.md)
+- [Source and asset attribution](docs/ATTRIBUTION.md)
+- [Integration footprint and sourced adoption figures](docs/COVERAGE.md)
+
+The broader integration catalogue distinguishes four runnable packages and 19 platform-specific installation recipes. Dutch and English are supported; other languages are previews. There is no verified 90% market-coverage or clinical-effectiveness claim. Pitch and slide preparation are deferred.
+
+## Original challenge starter
+
 # Stop Before It Starts
 
 **Hackathon for Good #8** | 6-8 November 2026 | The Hague

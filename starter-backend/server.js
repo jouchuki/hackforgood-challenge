@@ -10,6 +10,7 @@
 
 import express from 'express';
 import { readFile } from 'node:fs/promises';
+import { createDemoRouter } from './demo.js';
 
 const app = express();
 const PORT = 3001;
@@ -18,6 +19,7 @@ const PORT = 3001;
 // Middleware
 // ---------------------------------------------------------------------------
 app.use(express.json());
+app.use('/api/demo', createDemoRouter());
 
 // CORS — allow localhost dev servers
 app.use((_req, res, next) => {

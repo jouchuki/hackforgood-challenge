@@ -1,0 +1,9 @@
+{
+  "landingPage": "/",
+  "login": true,
+  "steps": [
+    {"step":"activatePlugin","pluginPath":"before-prevention/sbis-widget.php"},
+    {"step":"setSiteOptions","options":{"blogname":"MySmall20kUserForum","before_endpoint":"http://localhost:3000","before_site":"wordpress","before_demo":"1"}},
+    {"step":"runPHP","code":"<?php require '/wordpress/wp-load.php'; $existing=get_page_by_path('before-demo'); $id=$existing ? $existing->ID : wp_insert_post(array('post_title'=>'Community search','post_name'=>'before-demo','post_type'=>'page','post_status'=>'publish','post_content'=>'[before_demo]')); update_option('show_on_front','page'); update_option('page_on_front',$id);"}
+  ]
+}

@@ -1,0 +1,166 @@
+{
+  "beforeSource": "Rendered screenshots captured during the UI audit before this clarity pass. Existing images preserved without alteration.",
+  "desktop": {
+    "width": 1440,
+    "height": 1000
+  },
+  "mobile": {
+    "width": 390,
+    "height": 844
+  },
+  "state": "Seeded local workspace; MySmall20kUserForum, reflection-first study, English UI. Visitor views use preview=1 and country=NL. Mobile baseline visitor text uses English; controls preserve the original capture state.",
+  "entries": [
+    {
+      "id": "launcher",
+      "title": "Choose a workspace",
+      "route": "/",
+      "file": "00--.png"
+    },
+    {
+      "id": "moderator-overview",
+      "title": "Moderator overview",
+      "route": "/moderator/overview",
+      "file": "01--moderator-overview.png"
+    },
+    {
+      "id": "message-editor",
+      "title": "Message editor",
+      "route": "/moderator/intervention",
+      "file": "02--moderator-intervention.png"
+    },
+    {
+      "id": "moderator-results",
+      "title": "Moderator results",
+      "route": "/moderator/analytics",
+      "file": "03--moderator-analytics.png"
+    },
+    {
+      "id": "install",
+      "title": "Install catalogue",
+      "route": "/moderator/integrations",
+      "file": "04--moderator-integrations.png"
+    },
+    {
+      "id": "study-review",
+      "title": "Moderator study review",
+      "route": "/moderator/research",
+      "file": "05--moderator-research.png"
+    },
+    {
+      "id": "country-content",
+      "title": "Country and language settings",
+      "route": "/moderator/content",
+      "file": "06--moderator-content.png"
+    },
+    {
+      "id": "wordpress-guide",
+      "title": "WordPress installation guide",
+      "route": "/moderator/docs/wordpress",
+      "file": "08--moderator-docs-wordpress.png"
+    },
+    {
+      "id": "researcher-studies",
+      "title": "Research studies",
+      "route": "/researcher/studies",
+      "file": "12--researcher-studies.png"
+    },
+    {
+      "id": "research-setup",
+      "title": "Study setup",
+      "route": "/researcher/studies/reflection-first/editor",
+      "composerStep": "setup",
+      "file": "13--researcher-studies-reflection-first-editor.png"
+    },
+    {
+      "id": "research-composer",
+      "title": "Study messages",
+      "route": "/researcher/studies/reflection-first/editor",
+      "composerStep": "messages",
+      "file": "13--researcher-studies-reflection-first-editor.png"
+    },
+    {
+      "id": "research-results",
+      "title": "Study results",
+      "route": "/researcher/studies/reflection-first/results",
+      "file": "14--researcher-studies-reflection-first-results.png"
+    },
+    {
+      "id": "visitor-reflection",
+      "title": "Visitor reflection",
+      "route": "/intervention/demo-forum?preview=1&lang=en&country=NL",
+      "file": "15--intervention-demo-forum-preview-1-lang-en-country-NL.png"
+    },
+    {
+      "id": "visitor-support",
+      "title": "Visitor support",
+      "route": "/intervention/demo-forum?preview=1&lang=en&country=NL",
+      "stage": 2,
+      "file": "visitor-stage-2.png"
+    },
+    {
+      "id": "help-directory",
+      "title": "Help directory",
+      "route": "/help",
+      "file": "16--help.png"
+    },
+    {
+      "id": "website-demo",
+      "title": "Website example",
+      "route": "/demo/forum",
+      "file": "17--demo-forum.png"
+    },
+    {
+      "id": "wordpress-site",
+      "title": "WordPress example",
+      "route": "http://localhost:9400/",
+      "file": "wordpress-site.png"
+    },
+    {
+      "id": "wordpress-settings",
+      "title": "WordPress plugin settings",
+      "route": "http://localhost:9400/wp-admin/options-general.php?page=before-prevention",
+      "file": "wordpress-settings.png"
+    },
+    {
+      "id": "mobile-overview",
+      "title": "Mobile moderator overview",
+      "route": "/moderator/overview",
+      "mobile": true,
+      "file": "mobile--moderator-overview.png"
+    },
+    {
+      "id": "mobile-composer",
+      "title": "Mobile study composer",
+      "route": "/researcher/studies/reflection-first/editor",
+      "composerStep": "messages",
+      "mobile": true,
+      "file": "mobile--researcher-studies-reflection-first-editor.png"
+    },
+    {
+      "id": "mobile-visitor",
+      "title": "Mobile visitor journey",
+      "route": "/intervention/demo-forum?preview=1&lang=en&country=NL",
+      "mobile": true,
+      "file": "mobile--intervention-demo-forum-preview-1-lang-en-country-NL.png"
+    }
+  ],
+  "afterCapturedAt": "2026-11-08T00:01:44.403Z",
+  "failures": [],
+  "additionalEvidence": [
+    {
+      "file": "deployment-verified.png",
+      "title": "Browser deployment verified",
+      "description": "An administrator-started check followed the actual browser SDK, test submission and full-page intervention. The check required all three receipts and contributed no visitor metrics."
+    },
+    {
+      "file": "wordpress-deployment-verified.png",
+      "title": "WordPress deployment verified",
+      "description": "The installed WordPress plugin loaded the SDK and completed a real core-search server redirect. The selected WordPress installation then reported the full diagnostic sequence as verified."
+    },
+    {
+      "file": "research-engagement.png",
+      "title": "Authored study engagement results",
+      "description": "A newly authored study was published and explicitly enabled. Presenter controls generated a reportable batch; all three displayed engagement rates and the A/B difference were checked against stored aggregates. This is a separate verification example, not a matched before-and-after comparison or a finding of effectiveness."
+    }
+  ]
+}

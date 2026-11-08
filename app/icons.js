@@ -1,0 +1,31 @@
+const paths = {
+  grid: '<rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/>',
+  layers: '<path d="m12 3 10 5-10 5L2 8l10-5Z"/><path d="m2 12 10 5 10-5M2 16l10 5 10-5"/>',
+  flask: '<path d="M9 3h6M10 3v7l-6 9a1.5 1.5 0 0 0 1.3 2h13.4a1.5 1.5 0 0 0 1.3-2l-6-9V3M7.5 15h9"/>',
+  plug: '<path d="M9 3v4m6-4v4M7 7h10v4a5 5 0 0 1-10 0V7Zm5 9v5"/>',
+  book: '<path d="M12 5v16M3 3h5a4 4 0 0 1 4 2 4 4 0 0 1 4-2h5v16h-5a4 4 0 0 0-4 2 4 4 0 0 0-4-2H3V3Z"/>',
+  arrow: '<path d="M4 12h15m-5-5 5 5-5 5"/>',
+  external: '<path d="M14 3h7v7m0-7L10 14M10 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5"/>',
+  chevron: '<path d="m9 5 7 7-7 7"/>',
+  down: '<path d="m6 9 6 6 6-6"/>',
+  shield: '<path d="m12 3 8 3v6c0 5-8 9-8 9s-8-4-8-9V6l8-3Z"/><path d="m8 12 3 3 5-6"/>',
+  heart: '<path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/>',
+  eye: '<path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/>',
+  close: '<path d="m6 6 12 12M6 18 18 6"/>',
+  clock: '<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',
+  plus: '<path d="M12 5v14M5 12h14"/>',
+  play: '<path d="m8 4 12 8-12 8V4Z"/>',
+  pause: '<path d="M8 4v16M16 4v16"/>',
+  download: '<path d="M12 3v12m-5-5 5 5 5-5M4 16v5h16v-5"/>',
+  check: '<path d="m5 12 4 4L19 6"/>',
+  code: '<path d="m8 5-6 7 6 7m8-14 6 7-6 7M14 3l-4 18"/>',
+  copy: '<rect x="8" y="8" width="12" height="13" rx="2"/><path d="M16 8V3H3v13h5"/>',
+  globe: '<circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><path d="M3 12h18"/>',
+  info: '<circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7v.1"/>',
+  menu: '<path d="M4 6h16M4 12h16M4 18h16"/>',
+  message: '<path d="M21 12a8 8 0 0 1-8 8H3l2-5a8 8 0 1 1 16-3Z"/><path d="M8 10h8M8 14h5"/>',
+  leaf: '<path d="M20 3C7 2 2 8 5 15s16 7 15-12Z"/><path d="M4 21 15 10"/>',
+};
+export const icon = (name, size = 20) => `<svg width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${paths[name] || paths.grid}</svg>`;
+export const mark = `<svg viewBox="0 0 36 36" fill="none" aria-hidden="true"><path d="M7 28V17C7 10.4 11.9 5 18 5s11 5.4 11 12v11" stroke="currentColor" stroke-width="2"/><path d="M13 28V17a5 5 0 0 1 10 0v11M7 28h22" stroke="currentColor" stroke-width="2"/><circle cx="18" cy="23" r="2" fill="currentColor"/></svg>`;
+export const landscape = `<svg class="landscape" viewBox="0 0 440 300" fill="none" aria-hidden="true"><path d="M100 260V135a120 120 0 0 1 240 0v125" fill="var(--illustration-sky)"/><circle cx="220" cy="105" r="33" fill="var(--illustration-sun)"/><path d="M70 221c75-76 124-42 174-21s89-22 131-26v104H70Z" fill="var(--illustration-hill)"/><path d="M70 242c74-19 126 30 187 12s87-8 118 2v22H70Z" fill="var(--illustration-front)"/><path d="M215 199c-45 28 55 36 28 56-9 7-28 13-40 23" stroke="var(--surface)" stroke-width="10"/><path d="M71 279h304" stroke="var(--foreground)" stroke-opacity=".16"/><path d="M92 218v-33m0 13c-15 0-20-14-20-14s19-5 20 14Zm0 8c17-1 20-16 20-16s-19-3-20 16ZM352 204v-35m0 16c-17-1-20-16-20-16s19-3 20 16Zm0 9c17 0 20-14 20-14s-19-5-20 14Z" stroke="var(--accent)" stroke-width="2" stroke-linecap="round"/></svg>`;

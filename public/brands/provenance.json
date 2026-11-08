@@ -1,0 +1,136 @@
+[
+  {
+    "id": "angular",
+    "source": "https://angular.dev/assets/icons/favicon.ico",
+    "retrieved": "2026-11-07",
+    "usage": "Official site favicon for identification; no endorsement. Provider brand rights remain with owner."
+  },
+  {
+    "id": "astro",
+    "source": "https://astro.build/favicon.svg",
+    "retrieved": "2026-11-07",
+    "usage": "Official site favicon for identification; no endorsement. Provider brand rights remain with owner."
+  },
+  {
+    "id": "discord",
+    "source": "https://cdn.prod.website-files.com/6257adef93867e50d84d30e2/6266bc493fb42d4e27bb8393_847541504914fd33810e70a0ea73177e.ico",
+    "retrieved": "2026-11-07",
+    "usage": "Official site favicon for identification; no endorsement. Provider brand rights remain with owner."
+  },
+  {
+    "id": "discourse",
+    "source": "https://www.discourse.org/a/img/favicon.ico",
+    "retrieved": "2026-11-07",
+    "usage": "Official site favicon for identification; no endorsement. Provider brand rights remain with owner."
+  },
+  {
+    "id": "django",
+    "source": "https://static.djangoproject.com/img/favicon.6dbf28c0650e.ico",
+    "retrieved": "2026-11-07",
+    "usage": "Official site favicon for identification; no endorsement. Provider brand rights remain with owner."
+  },
+  {
+    "id": "drupal",
+    "source": "https://new.drupal.org/core/misc/favicon.ico",
+    "retrieved": "2026-11-07",
+    "usage": "Official site favicon for identification; no endorsement. Provider brand rights remain with owner."
+  },
+  {
+    "id": "express",
+    "source": "https://expressjs.com/favicon.ico",
+    "retrieved": "2026-11-07",
+    "usage": "Official site favicon for identification; no endorsement. Provider brand rights remain with owner."
+  },
+  {
+    "id": "flarum",
+    "source": "https://flarum.org/favicon.ico?v=YAXePblQz9",
+    "retrieved": "2026-11-07",
+    "usage": "Official site favicon for identification; no endorsement. Provider brand rights remain with owner."
+  },
+  {
+    "id": "invision",
+    "source": null,
+    "usage": "Original generated monogram fallback"
+  },
+  {
+    "id": "javascript",
+    "source": "https://developer.mozilla.org/favicon.ico",
+    "retrieved": "2026-11-07",
+    "usage": "Official site favicon for identification; no endorsement. Provider brand rights remain with owner."
+  },
+  {
+    "id": "joomla",
+    "source": "https://www.joomla.org/favicon.ico",
+    "retrieved": "2026-11-07",
+    "usage": "Official site favicon for identification; no endorsement. Provider brand rights remain with owner."
+  },
+  {
+    "id": "laravel",
+    "source": "https://laravel.com/img/favicon/favicon.ico",
+    "retrieved": "2026-11-07",
+    "usage": "Official site favicon for identification; no endorsement. Provider brand rights remain with owner."
+  },
+  {
+    "id": "nextjs",
+    "source": "https://nextjs.org/favicon.ico?favicon.38folom4sz_yx.ico",
+    "retrieved": "2026-11-07",
+    "usage": "Official site favicon for identification; no endorsement. Provider brand rights remain with owner."
+  },
+  {
+    "id": "nodebb",
+    "source": null,
+    "usage": "Original generated monogram fallback"
+  },
+  {
+    "id": "nuxt",
+    "source": "https://nuxt.com/icon.png",
+    "retrieved": "2026-11-07",
+    "usage": "Official site favicon for identification; no endorsement. Provider brand rights remain with owner."
+  },
+  {
+    "id": "phpbb",
+    "source": null,
+    "usage": "Original generated monogram fallback"
+  },
+  {
+    "id": "rails",
+    "source": "https://rubyonrails.org/assets/images/favicon.png",
+    "retrieved": "2026-11-07",
+    "usage": "Official site favicon for identification; no endorsement. Provider brand rights remain with owner."
+  },
+  {
+    "id": "react",
+    "source": "https://react.dev/safari-pinned-tab.svg",
+    "retrieved": "2026-11-07",
+    "usage": "Official site favicon for identification; no endorsement. Provider brand rights remain with owner."
+  },
+  {
+    "id": "svelte",
+    "source": "https://svelte.dev/favicon.png",
+    "retrieved": "2026-11-07",
+    "usage": "Official site favicon for identification; no endorsement. Provider brand rights remain with owner."
+  },
+  {
+    "id": "tor",
+    "source": "https://www.torproject.org/static/images/favicon/favicon.ico",
+    "retrieved": "2026-11-07",
+    "usage": "Official site favicon for identification; no endorsement. Provider brand rights remain with owner."
+  },
+  {
+    "id": "vue",
+    "source": "https://vuejs.org/logo.svg",
+    "retrieved": "2026-11-07",
+    "usage": "Official site favicon for identification; no endorsement. Provider brand rights remain with owner."
+  },
+  {
+    "id": "wordpress",
+    "source": "https://s.w.org/favicon.ico?2",
+    "retrieved": "2026-11-07",
+    "usage": "Official site favicon for identification; no endorsement. Provider brand rights remain with owner."
+  },
+  {
+    "id": "xenforo",
+    "source": null,
+    "usage": "Original generated monogram fallback"
+  }
+]

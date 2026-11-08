@@ -1,0 +1,3 @@
+import {spawn}from'node:child_process';import{resolve}from'node:path';
+const child=spawn(process.execPath,['node_modules/@wp-playground/cli/cli.js','server','--port=9400','--site-url=http://localhost:9400','--wp=6.8','--php=8.3','--define-bool','WP_DEBUG','false','--define-bool','WP_DEBUG_DISPLAY','false','--define-bool','WP_DEBUG_LOG','false',`--mount=${resolve('integrations/wordpress-plugin')}:/wordpress/wp-content/plugins/before-prevention`,`--blueprint=${resolve('integrations/wordpress-blueprint.json')}`,'--login'],{stdio:'inherit'});
+process.on('SIGINT',()=>child.kill('SIGTERM'));process.on('SIGTERM',()=>child.kill('SIGTERM'));child.on('exit',code=>process.exit(code??0));

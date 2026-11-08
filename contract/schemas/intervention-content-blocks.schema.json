@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "intervention-content-blocks.schema.json",
+  "title": "Authored intervention content blocks",
+  "description": "Optional bilingual supplemental blocks in an immutable published intervention. The API also enforces author-block ID uniqueness across all stages.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["reflection", "education", "support"],
+  "properties": {
+    "reflection": { "$ref": "#/$defs/stage" },
+    "education": { "$ref": "#/$defs/stage" },
+    "support": { "$ref": "#/$defs/stage" }
+  },
+  "$defs": {
+    "stage": {
+      "type": "array",
+      "maxItems": 6,
+      "items": { "$ref": "#/$defs/block" }
+    },
+    "block": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "type", "en", "nl"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^[A-Za-z0-9_-]{1,64}$" },
+        "type": { "enum": ["text", "callout", "quote", "list", "divider"] },
+        "en": { "type": "string", "maxLength": 600 },
+        "nl": { "type": "string", "maxLength": 600 }
+      },
+      "allOf": [{
+        "if": { "properties": { "type": { "const": "divider" } } },
+        "else": {
+          "properties": {
+            "en": { "type": "string", "pattern": "\\S" },
+            "nl": { "type": "string", "pattern": "\\S" }
+          }
+        }
+      }]
+    }
+  }
+}

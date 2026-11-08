@@ -1,0 +1,23 @@
+# Data boundaries
+
+Visitor configuration and aggregate signals omit cookies and the Referer header. The application never stores original input, browser URLs, visitor identities, IP addresses, per-person histories or raw event rows. Site identifiers describe installations, not people. Necessary moderator/researcher sessions are separate from visitor traffic.
+
+The owned gateway receives a network connection and may resolve its address transiently against a local country database. It removes forwarded-IP headers, replaces the country hint, and authenticates its request to the private application. The address is neither logged nor forwarded as visitor data. No per-visitor request is sent to a geolocation vendor. Country estimation is approximate; users can correct it. The local country dataset is [DB-IP Lite](https://db-ip.com/db/download/ip-to-country-lite), under CC BY 4.0.
+
+Measurement stores counter totals by installation, immutable publication, arm, coarse day and synthetic dataset source. A signal can arrive for one interaction; it is immediately counted and discarded. This is aggregate-only storage, not a claim of pre-aggregated or mathematically anonymous network requests.
+
+Counts below ten and derived rates with hidden inputs are withheld in reports and exports. No individual activity feed, persistent experiment assignment, unique-person statistics or inferred offender categories are provided. A help-link selection does not establish receipt of treatment. Exit measurement is best-effort, and missing durations are not zero.
+
+All demonstrations use synthetic inputs. Real deployment and research would need platform-specific review of infrastructure logs, independent help-service terms, data governance and evaluation procedures. External services have their own data practices after a visitor deliberately follows a link.
+
+Deployment checks are administrator-initiated walkthroughs. A random challenge expires after ten minutes and lives only in server memory. It records whether the installation loaded its SDK, submitted a test form, and rendered the intervention; it never records form content, visitor identifiers or research outcomes. Ordinary visits do not create or send these receipts. Completing a walkthrough verifies that path at that moment, not every third-party form on the platform.
+
+Research engagement adds only once-per-exposure counters for an education-stage scroll and visibility of its message-end marker. Exact scroll position, percentage, trajectory, pointer motion and timestamps are neither submitted nor stored. New scroll/end rates use only education exposures that support those measurements; historical outcomes are not treated as zero engagement. Visible-time retention uses finalized coarse duration buckets, so ongoing or missing durations do not enter its denominator. Reaching an end marker indicates visibility, not reading or comprehension.
+
+The local research workspace can explicitly approve one of its three owned test installations for a published study version. Its API labels this authority `local_demo_operator`; it does not list arbitrary platforms or grant production researchers owner privileges. Publishing alone never changes platform participation, replacing an enabled revision requires confirmation, and analytics remain in the researcher workspace.
+
+Step connections add coarse once-per-exposure counter deltas. The browser keeps only an in-memory set of already-counted connections, and the server retains totals by the existing publication/variant/day/source dimensions. This does not store an ordered event stream or reconstruct individual sessions. Historical optional counters remain unmeasured rather than backfilled.
+
+The researcher may explicitly export reportable aggregate snapshots to PostHog. No browser SDK, session replay, visitor identity, original submission or visitor IP is sent to PostHog. Its required distinct IDs identify aggregate datasets rather than people; person profiles and geolocation are disabled in the export payload. Suppressed counts remain null, and repeated identical snapshots are not exported twice. Provider configuration stays in a protected server file.
+
+Owner credential forms send secrets only to first-party administration endpoints, never URL parameters or browser storage. Secrets are stored in ignored 0600 server configuration and are never returned by configuration APIs. Optional Discord account OAuth uses necessary HttpOnly cookies and state/PKCE checks; provider access tokens and minimal moderator account metadata remain in server memory until expiry or disconnection. This is separate from visitor measurement.

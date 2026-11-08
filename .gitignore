@@ -13,6 +13,8 @@ tools/dashboard/generated/
 .env
 .env.local
 .env.*.local
+.env.*
+!.env.example
 
 # IDE
 .idea/
@@ -39,6 +41,12 @@ venv/
 .ipynb_checkpoints/
 
 # Lock files — participants generate their own
-package-lock.json
+# Track package-lock.json for reproducible installations.
 yarn.lock
 pnpm-lock.yaml
+
+# Local demo data and generated release archives
+.before/
+release/
+test-results/
+playwright-report/

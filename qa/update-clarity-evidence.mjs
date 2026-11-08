@@ -1,0 +1,11 @@
+import {readFile,writeFile,access} from 'node:fs/promises';
+const dir='artifacts/ui-clarity';
+const entries=[
+ ['deployment-verified.png','Browser deployment verified','An administrator-started check followed the actual browser SDK, test submission and full-page intervention. The check required all three receipts and contributed no visitor metrics.'],
+ ['wordpress-deployment-verified.png','WordPress deployment verified','The installed WordPress plugin loaded the SDK and completed a real core-search server redirect. The selected WordPress installation then reported the full diagnostic sequence as verified.'],
+ ['research-engagement.png','Authored study engagement results','A newly authored study was published and explicitly enabled. Presenter controls generated a reportable batch; all three displayed engagement rates and the A/B difference were checked against stored aggregates. This is a separate verification example, not a matched before-and-after comparison or a finding of effectiveness.'],
+];
+const available=[];for(const [file,title,description]of entries){try{await access(`${dir}/after/${file}`);available.push({file,title,description});}catch{}}
+const content='<!-- verification-evidence --><section id="verified-examples"><h2>Additional verification examples</h2><p>These screenshots document completed checks after the clarity pass. They use different states from the matched comparisons above.</p>'+available.map(({file,title,description})=>`<article class="shot" style="margin:20px 0"><h3>${title}</h3><p style="padding:0 14px">${description}</p><div class="viewport"><img src="after/${file}" alt="${title}" loading="lazy"></div><a href="after/${file}">Open full screenshot</a></article>`).join('')+'</section><!-- /verification-evidence -->';
+let html=await readFile(`${dir}/index.html`,'utf8');html=html.replace(/<!-- verification-evidence -->[\s\S]*?<!-- \/verification-evidence -->/,'');html=html.replace('</main>',content+'</main>');await writeFile(`${dir}/index.html`,html);
+const manifest=JSON.parse(await readFile(`${dir}/manifest.json`,'utf8'));manifest.additionalEvidence=available;await writeFile(`${dir}/manifest.json`,JSON.stringify(manifest,null,2));console.log(`Added ${available.length} separate verification examples.`);

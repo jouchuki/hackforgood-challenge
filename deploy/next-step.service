@@ -1,0 +1,25 @@
+[Unit]
+Description=Next Step prevention demo
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=nextstep
+Group=nextstep
+WorkingDirectory=/opt/next-step
+Environment=NODE_ENV=production
+EnvironmentFile=/etc/next-step.env
+ExecStart=/usr/local/bin/node tools/run-local.mjs --production
+Restart=always
+RestartSec=3
+TimeoutStopSec=15
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectHome=true
+ProtectSystem=strict
+ReadWritePaths=/opt/next-step/.before /opt/next-step/integrations/discord
+UMask=0077
+
+[Install]
+WantedBy=multi-user.target

@@ -41,7 +41,7 @@ const SUSPICIOUS_FILE_PATTERNS = [
 const SCAN_EXTENSIONS = new Set(['.json']);
 
 // Directories to skip
-const SKIP_DIRS = new Set(['node_modules', '.git', 'dist']);
+const SKIP_DIRS = new Set(['node_modules', '.git', 'dist', '.before', 'release', 'test-results', 'playwright-report']);
 
 let errors = [];
 

@@ -7,11 +7,24 @@
     "node": ">=20"
   },
   "scripts": {
-    "dev": "concurrently --names platform,backend \"vite --config vite.config.js\" \"node starter-backend/server.js\"",
+    "dev": "node tools/run-local.mjs",
     "check": "node tools/check-safety.js",
-    "test": "node --test test/check-safety.test.js",
+    "test": "node --test test/*.test.js",
     "generate:traffic": "node tools/generate-traffic.js",
-    "dashboard": "vite dev --config vite-dashboard.config.js"
+    "dashboard": "vite dev --config vite-dashboard.config.js",
+    "build": "node tools/build.mjs",
+    "start": "node tools/run-local.mjs --production",
+    "demo:prepare": "node tools/prepare.mjs",
+    "demo:seed": "node server/state-cli.js seed",
+    "demo:reset": "node server/state-cli.js reset",
+    "demo:site": "node tools/fixture-server.mjs",
+    "demo:wordpress": "node tools/wordpress.mjs",
+    "test:browser": "playwright test qa/browser.spec.js",
+    "test:wordpress": "playwright test qa/wordpress.spec.js",
+    "bot": "node integrations/discord/bot.js",
+    "bot:register": "node integrations/discord/register.js",
+    "release": "node tools/release.mjs",
+    "test:clarity": "playwright test qa/clarity.spec.js"
   },
   "keywords": [
     "hackathon",
@@ -22,11 +35,26 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "ajv": "^8.17.1",
-    "express": "^4.21.0"
+    "@fontsource-variable/dm-sans": "^5.3.0",
+    "@fontsource-variable/newsreader": "^5.3.0",
+    "ajv": "^8.20.0",
+    "discord.js": "^14.28.1",
+    "express": "^4.21.0",
+    "maxmind": "^5.0.8",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
   },
   "devDependencies": {
+    "@playwright/test": "^1.65.0",
+    "@types/react": "^19.3.0",
+    "@wp-playground/cli": "3.1.20",
     "concurrently": "^9.1.0",
+    "esbuild": "^0.28.2",
     "vite": "^6.0.0"
+  },
+  "overrides": {
+    "ws": "8.22.1",
+    "qs": "6.17.1",
+    "ajv": "$ajv"
   }
 }

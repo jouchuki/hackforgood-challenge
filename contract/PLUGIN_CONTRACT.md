@@ -1,5 +1,7 @@
 # Plug-in contract
 
+For the runnable Before implementation, see [the delivered API](DELIVERED_API.md). The original starter examples below remain reference material; DOM result events must not be forwarded directly to Before's strict aggregate collector.
+
 This document defines the interface between a **platform** (the website that shows a warning) and a **module** (the code your team builds). Every team's module should follow this contract so it can plug into the mock platform — and into real platforms the same way.
 
 ## Lifecycle

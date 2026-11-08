@@ -1,0 +1,11 @@
+{
+  "name": "@before/browser",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Before browser intervention adapter, local demonstration package",
+  "main": "./dist/index.js",
+  "types": "./src/index.d.ts",
+  "exports": { ".": { "types": "./src/index.d.ts", "import": "./dist/index.js", "default": "./dist/index.js" } },
+  "files": ["dist", "src/index.d.ts", "README.md"],
+  "license": "MIT"
+}
