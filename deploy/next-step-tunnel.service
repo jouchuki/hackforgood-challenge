@@ -1,0 +1,17 @@
+[Unit]
+Description=Next Step Cloudflare quick tunnel
+After=network-online.target next-step.service
+Wants=network-online.target next-step.service
+
+[Service]
+User=nextstep
+Group=nextstep
+ExecStart=/usr/local/bin/cloudflared tunnel --no-autoupdate --url http://127.0.0.1:3000 --protocol http2
+Restart=always
+RestartSec=3
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectHome=true
+
+[Install]
+WantedBy=multi-user.target
